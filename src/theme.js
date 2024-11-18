@@ -4,8 +4,8 @@ import { cyan, deepOrange, orange, teal } from '@mui/material/colors'
 // Create a theme instance.
 const theme = extendTheme({
   chat: {
-    headerHeight: '48px',
-    boardBarHeight: '58px'
+    headerHeight: '58px',
+    boardBarHeight: '60px'
   },
   colorSchemes: {
     light: {
