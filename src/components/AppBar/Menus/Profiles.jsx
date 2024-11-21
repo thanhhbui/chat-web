@@ -36,7 +36,7 @@ function Profiles() {
           <Avatar
             sx={{ width: 30, height: 30 }}
             alt='thanhbui'
-            src='https://printler.com/media/photo/152470.jpg'
+            src='https://i.pinimg.com/564x/15/a2/c1/15a2c1eeb335985509fb44d7e39e073a.jpg'
           />
         </IconButton>
       </Tooltip>
