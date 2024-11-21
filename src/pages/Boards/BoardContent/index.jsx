@@ -1,22 +1,18 @@
 import Box from '@mui/material/Box'
+import Chats from '~/pages/Sidebar/Chats'
+import ChatContent from '~/pages/Sidebar/ChatContent'
 
 function BoardContent() {
   return (
     <Box sx={{
       width: '100%',
-      height: (theme) => `calc(100vh - ${theme.chat.headerHeight} - ${theme.chat.boardBarHeight})`,
-      backgroundColor: 'primary.light',
+      height: (theme) => `calc(100vh - ${theme.chat.headerHeight})`,
+      // backgroundColor: 'primary.light',
       display: 'flex',
       alignItems: 'center'
     }}>
-      <Box sx={{
-        width: '30%',
-        height: '100%'
-      }}>Left</Box>
-      <Box sx={{
-        width: '70%',
-        height: '100%'
-      }}>Right</Box>
+      <Chats />
+      <ChatContent />
     </Box>
   )
 }
