@@ -7,7 +7,7 @@ function BoardContent() {
     <Box sx={{
       width: '100%',
       height: (theme) => `calc(100vh - ${theme.chat.headerHeight})`,
-      // backgroundColor: 'primary.light',
+      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'),
       display: 'flex',
       alignItems: 'center'
     }}>

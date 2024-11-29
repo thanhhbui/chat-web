@@ -22,17 +22,18 @@ function AppBar() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      overflowX: 'auto'
+      overflowX: 'auto',
+      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0')
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <AppsIcon sx={{ color: 'primary.main' }}/>
+        <AppsIcon sx={{ color: 'white' }}/>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <SvgIcon component={chatLogo} inheritViewBox sx={{ color: 'primary.main' }} />
-          <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'primary.main' }} >Groot</Typography>
+          <SvgIcon component={chatLogo} inheritViewBox sx={{ color: 'white' }} />
+          <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }} >Groot</Typography>
         </Box>
         <Box sx={{ display: { xs: 'none', md: 'flex', gap: 1 } }}>
           <Workspaces />
-          <Button variant="outlined">Create</Button>
+          <Button sx={{ color: 'white' }}>Create</Button>
         </Box>
       </Box>
 
@@ -41,13 +42,13 @@ function AppBar() {
         <ModeSelect />
 
         <Tooltip title="Notifications">
-          <Badge color="secondary" variant="dot" sx={{ cursor: 'pointer' }} >
-            <NotificationsNoneIcon sx={{ color: 'primary.main' }} />
+          <Badge color="warning" variant="dot" sx={{ cursor: 'pointer' }} >
+            <NotificationsNoneIcon sx={{ color: 'white' }} />
           </Badge>
         </Tooltip>
 
         <Tooltip title="Help">
-          <HelpOutlineIcon sx={{ cursor: 'pointer', color: 'primary.main' }}/>
+          <HelpOutlineIcon sx={{ cursor: 'pointer', color: 'white' }}/>
         </Tooltip>
         <Profile />
       </Box>

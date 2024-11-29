@@ -3,7 +3,7 @@ import { Avatar, ListItem, ListItemAvatar, ListItemText } from '@mui/material'
 function ChatItem({ name, date }) {
   return (
     <ListItem >
-      <ListItemAvatar>
+      <ListItemAvatar sx={{ padding: '0px' }}>
         <Avatar>
         </Avatar>
       </ListItemAvatar>
