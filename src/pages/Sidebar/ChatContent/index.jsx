@@ -13,8 +13,8 @@ function ChatContent() {
     <Box sx={{ 
       width: { xs: '100%', md: '70%' },
       height: (theme) => `calc(100vh - ${theme.chat.headerHeight} - 20px)`,
-      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0'),
-      borderRadius: '12px',
+      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#333643' : '#ebecf0'),
+      borderRadius: '6px',
       margin: '10px'
     }}>
       <Box sx={{ width: '100%', height: (theme) => theme.chat.chatHeaderHeight }}>
@@ -23,68 +23,70 @@ function ChatContent() {
           <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: '8px 16px', gap: 2 }}>
             <Tooltip title="Call">
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <SvgIcon component={Phone} inheritViewBox fontSize='medium' sx={{ borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+                <SvgIcon component={Phone} inheritViewBox fontSize='medium' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
               </div>
             </Tooltip>
             <Tooltip title="Video Call">
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <SvgIcon component={Video} inheritViewBox fontSize='large' sx={{ borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+                <SvgIcon component={Video} inheritViewBox fontSize='large' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
               </div>
             </Tooltip>
             <Tooltip title="More">
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <SvgIcon component={More} inheritViewBox fontSize='large' sx={{ borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+                <SvgIcon component={More} inheritViewBox fontSize='large' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
               </div>
             </Tooltip>
           </Box>
         </Box>
       </Box>
       <Box sx={{ width: '100%', height: (theme) => `calc(100% - ${theme.chat.chatHeaderHeight} - 10px)` }}>
-        <Box sx={{ width: 'auto', height: (theme) => `calc(100% - ${theme.chat.chatHeaderHeight})`, backgroundColor: '#fff', margin: '0px 20px 10px 20px', borderRadius: '12px' }}>
+        <Box sx={{ width: 'auto', height: (theme) => `calc(100% - ${theme.chat.chatHeaderHeight})`, backgroundColor: '#fff', margin: '0px 20px 10px 20px', borderRadius: '6px' }}>
         </Box>
-        <Box sx={{ width: '100%', height: (theme) => `calc(${theme.chat.chatHeaderHeight} - 20px)`, display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-          <Box sx={{ width: '95%', height: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: 2 }}>
+        <Box sx={{ width: '100%', height: (theme) => `calc(${theme.chat.chatHeaderHeight} - 20px)`, display: 'flex', justifyContent: 'space-around', alignItems: 'center', mt: '20px' }}>
+          <Box sx={{ width: '95%', height: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: 2, padding: 0 }}>
             <Tooltip title="File" >
-              <InsertDriveFileIcon sx={{ fontSize: '32px', borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+              <InsertDriveFileIcon inheritViewBox fontSize='medium' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
             </Tooltip>
             <Tooltip title="Picture">
-              <InsertPhotoIcon sx={{ fontSize: '32px', borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+              <InsertPhotoIcon inheritViewBox fontSize='medium' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
             </Tooltip>
             <Tooltip title="Emoji">
-              <EmojiEmotionsIcon sx={{ fontSize: '32px', borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+              <EmojiEmotionsIcon inheritViewBox fontSize='medium' sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
             </Tooltip>
             <TextField
               fullWidth
               variant="outlined"
               placeholder="Type..."
+              size='medium'
               // value={message}
               // onChange={handleInputChange}
               // onKeyPress={handleKeyPress}
-              // color='white'
+              // color='dark'
               sx={{
                 marginTop: '8px',
                 minWidth: '120px', width: '100%',
+                height: '100%',
                 '& label': {
-                  color: 'white'
+                  color: 'dark'
                 },
                 '& label.Mui-focused': {
-                  color: 'white'
+                  color: 'dark'
                 },
                 '& input': {
-                  color: 'white'
+                  color: 'dark'
                 },
                 '& .MuiOutlinedInput-root': {
-                  '& fieldset': { borderColor: 'white' },
-                  '&:hover fieldset': { borderColor: 'white' },
-                  '&.Mui-focused fieldset': { borderColor: 'white' }
+                  '& fieldset': { borderColor: 'dark' },
+                  '&:hover fieldset': { borderColor: 'dark' },
+                  '&.Mui-focused fieldset': { borderColor: 'dark' }
                 },
                 '& .MuiInputBase-input::placeholder': {
-                  color: 'white'
+                  color: 'dark'
                 }
               }}
             />
             <Tooltip title="Send">
-              <SendIcon sx={{ fontSize: '32px', borderRadius: '50', cursor: 'pointer', color: 'white' }} />
+              <SendIcon fontSize='medium' inheritViewBox sx={{ borderRadius: '50', cursor: 'pointer', color: 'dark' }} />
             </Tooltip>
           </Box>
         </Box>

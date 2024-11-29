@@ -15,18 +15,18 @@ function Chats() {
       width: '30%',
       height: 'calc(100% - 20px)',
       margin: '10px 0px 10px 10px',
-      borderRadius: '12px',
+      borderRadius: '6px',
       display: { xs: 'none', md: 'flex', gap: 1 },
       flexDirection: 'column',
       alignItems: 'center',
-      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0')
+      backgroundColor: ( theme ) => (theme.palette.mode === 'dark' ? '#333643' : '#ebecf0')
     }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', width: '95%', height: (theme) => theme.chat.chatHeaderHeight, justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant='h4' sx={{ color: 'white', fontWeight: 'bold' }}>Chats</Typography>
+          <Typography variant='h4' sx={{ color: 'dark', fontWeight: 'bold' }}>Chats</Typography>
           <Tooltip title="Group">
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <SvgIcon component={GroupIcon} inheritViewBox fontSize='large' sx={{ cursor: 'pointer', color: 'white' }} />
+              <SvgIcon component={GroupIcon} inheritViewBox fontSize='large' sx={{ cursor: 'pointer', color: 'dark' }} />
             </div>
           </Tooltip>
         </Box>
@@ -41,26 +41,26 @@ function Chats() {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <SearchIcon sx={{ color: 'white' }} />
+                <SearchIcon sx={{ color: 'dark' }} />
               </InputAdornment>
             ),
             endAdornment: (
               <CloseIcon fontSize='small'
-                sx={{ color: searchValue ? 'white' : 'transparent', cursor: 'pointer' }}
+                sx={{ color: searchValue ? 'dark' : 'transparent', cursor: 'pointer' }}
                 onClick={() => setSearchValue('')}
               />
             )
           }}
           sx={{
             minWidth: '120px', width: '100%',
-            '& label': { color: 'white' },
-            '& label.Mui-focused': { color: 'white' },
-            '& input': { color: 'white' },
+            '& label': { color: 'dark' },
+            '& label.Mui-focused': { color: 'dark' },
+            '& input': { color: 'dark' },
 
             '& .MuiOutlinedInput-root': {
-              '& fieldset': { borderColor: 'white' },
-              '&:hover fieldset': { borderColor: 'white' },
-              '&.Mui-focused fieldset': { borderColor: 'white' }
+              '& fieldset': { borderColor: 'dark' },
+              '&:hover fieldset': { borderColor: 'dark' },
+              '&.Mui-focused fieldset': { borderColor: 'dark' }
             }
           }}
         />
