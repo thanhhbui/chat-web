@@ -1,17 +1,16 @@
 import { Box, InputAdornment, SvgIcon, TextField, Tooltip, Typography } from '@mui/material'
 import List from '@mui/material/List'
 import ChatItem from '~/components/Chats/ChatItem'
-// import GroupAddIcon from '@mui/icons-material/GroupAdd'
 import SearchIcon from '@mui/icons-material/Search'
 import CloseIcon from '@mui/icons-material/Close'
 import { ReactComponent as GroupIcon } from '~/assets/group.svg'
 import { useState } from 'react'
 
-function Chats() {
+function Chats({ users, onSelectUser }) {
   const [searchValue, setSearchValue] = useState('')
 
   return (
-    <Box sx={{ 
+    <Box sx={{
       width: '30%',
       height: 'calc(100% - 20px)',
       margin: '10px 0px 10px 10px',
@@ -65,28 +64,25 @@ function Chats() {
           }}
         />
       </Box>
-      <List sx={{ overflow: 'auto', width: '95%', height: (theme) => `calc(100% - ${theme.chat.chatHeaderHeight})`, bgcolor: 'background.paper', display: 'flex', flexDirection: 'column', borderRadius: '12px', marginTop: '18px', marginBottom: '18px', padding: '0px' }}>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m' date='July 20, 2014'/>
-        <ChatItem name='thanhbui' date='Jan 9, 2014'/>
-        <ChatItem name='Nguyễn Huy Hoàng' date='Jan 7, 2014'/>
-        <ChatItem name='m2' date='July 20, 2014'/>
+      <List sx={{
+        overflow: 'auto',
+        width: '95%',
+        height: (theme) => `calc(100% - ${theme.chat.chatHeaderHeight})`,
+        bgcolor: 'background.paper',
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: '6px',
+        marginTop: '18px',
+        marginBottom: '18px',
+        padding: '0px'
+      }}>
+        {
+          users.map((item) => (
+            <div key={item._id} onClick={() => onSelectUser(item)} >
+              <ChatItem name={item.name} avatar={item.avatar} status={item.status} />
+            </div>
+          ))
+        }
       </List>
     </Box>
   )

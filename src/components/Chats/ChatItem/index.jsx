@@ -1,13 +1,18 @@
 import { Avatar, ListItem, ListItemAvatar, ListItemText } from '@mui/material'
 
-function ChatItem({ name, date }) {
+function ChatItem({ name, avatar, status }) {
   return (
-    <ListItem >
+    <ListItem sx={{
+      '&:hover': {
+        bgcolor: 'lightblue',
+        cursor: 'pointer',
+        borderRadius: '6px'
+      }
+    }}>
       <ListItemAvatar sx={{ padding: '0px' }}>
-        <Avatar>
-        </Avatar>
+        <Avatar src={avatar}/>
       </ListItemAvatar>
-      <ListItemText primary={name} secondary={date} />
+      <ListItemText primary={name} secondary={status} />
     </ListItem>
   )
 }
